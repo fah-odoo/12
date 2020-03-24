@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <template id="bus_test_assets_backend" name="bus_test_assets_backend" inherit_id="web.assets_backend">
+    <xpath expr="." position="inside">
+      <script type="text/javascript" src="/bus_test/static/src/js/notification.js"/>
+    </xpath>
+  </template>
+
+</odoo>

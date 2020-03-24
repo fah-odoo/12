@@ -1,0 +1,19 @@
+version: '2'
+services:
+
+  web:
+    image: odoo:12.0
+    depends_on:
+      - db
+    ports:
+      - "8072:8072"
+    volumes:
+      - ./:/mnt/extra-addons/bus_test/
+    command: odoo --workers=2 -d bus_test -i bus_test
+
+  db:
+    image: postgres:10
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_USER=odoo
